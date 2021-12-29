@@ -19,9 +19,9 @@ func InitDb() *gorm.DB {
 	}
 
 	// Creating the table Wali Kelas
-	if !db.HasTable(&models.WaliKelass{}) {
-		db.CreateTable(&models.WaliKelass{})
-		db.Set("gorm:table_options", "ENGINE=InnoDB").CreateTable(&models.WaliKelass{})
+	if !db.HasTable(&models.Articles{}) {
+		db.CreateTable(&models.Articles{})
+		db.Set("gorm:table_options", "ENGINE=InnoDB").CreateTable(&models.Articles{})
 	}
 
 	return db

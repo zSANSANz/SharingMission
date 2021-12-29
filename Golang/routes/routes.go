@@ -31,11 +31,11 @@ func SetupRoutes(db *gorm.DB) *gin.Engine {
 
 	v1 := r.Group("api/v1")
 	{
-		v1.POST("/walikelass", controllers.PostWalikelas)
-		v1.GET("/walikelass", controllers.GetWalikelass)
-		v1.GET("/walikelass/:id", controllers.GetWalikelas)
-		v1.PUT("/walikelass/:id", controllers.UpdateWalikelas)
-		v1.DELETE("/walikelass/:id", controllers.DeleteWalikelas)
+		v1.POST("/articles", controllers.PostArticle)
+		v1.GET("/articles", controllers.GetArticles)
+		v1.GET("/articles/:id", controllers.GetArticle)
+		v1.PUT("/articles/:id", controllers.UpdateArticle)
+		v1.DELETE("/articles/:id", controllers.DeleteArticle)
 	}
 
 	return r
